@@ -4,3 +4,8 @@
 
 layout: home
 ---
+<ul>
+  <li><a href='studies.html'>Study</a></li>
+  <li><a href='thoughts.html'>Thoughts</a></li>
+  <li><a href='music.html'>Music</a></li>
+</ul>
