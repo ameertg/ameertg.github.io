@@ -1,0 +1,10 @@
+main:
+
+  # - title: Thoughts
+  #   url: /thoughts/
+  - title: Projects
+    url: /projects/
+  - title: Music
+    url: /music/
+  - title: CV
+    url: /CV/
