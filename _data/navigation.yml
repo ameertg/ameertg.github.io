@@ -3,16 +3,8 @@ main:
   # - title: Thoughts
   #   url: /thoughts/
   - title: Projects
-<<<<<<< HEAD
     url: /projects.html
   - title: Music
     url: /music.html
   - title: CV
     url: /CV.html
-=======
-    url: /projects/
-  - title: Music
-    url: /music/
-  - title: CV
-    url: /CV/
->>>>>>> 5dcfa7602738717d3c4bee719b1ebf9695824bb7
