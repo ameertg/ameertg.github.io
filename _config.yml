@@ -31,7 +31,7 @@ plugins:
 
 author:
   name     : "Ameer Saadat-Yazdi"
-  avatar   : "/assets/images/bio-photo.jpg"
+  avatar   : "/assets/images/me.jpg"
   bio      : "PhD student at the University of Edinburgh, School of Informatics."
   location : "Edinburgh, UK"
   links:
