@@ -24,15 +24,12 @@ github_username:  ameertg
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "dirt" 
 plugins:
   - jekyll-feed
   - jekyll-include-cache
 
-header_pages:
-  - thoughts.html
-  - projects.html
-  - music.html
-  - cv.html
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
