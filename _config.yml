@@ -24,10 +24,21 @@ github_username:  ameertg
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dirt" 
+minimal_mistakes_skin: "dirt"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+author:
+  name     : "Ameer Saadat-Yazdi"
+  avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "PhD student at the University of Edinburgh, School of Informatics."
+  location : "Edinburgh, UK"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ameertg"
+
 
 
 
