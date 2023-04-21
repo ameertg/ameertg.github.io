@@ -1,0 +1,23 @@
+---
+layout: single
+---
+<html>
+<head></head>
+<body>
+
+  <h2>{{ page.entry.author }}</h2>
+  {% if page.entry.abstract %}
+    <h3>Abstract:</h3>
+    <p>{{ page.entry.abstract }}</p>
+  {% else %}
+    <h3>Abstract pending...</h3>
+  {% endif %}
+  {% if page.entry.url %}
+    <a href={{ page.entry.url }}>link</a>
+  {% endif %}
+  {% if page.entry.pdf %}
+    <object data="{{ site.url }}/assets/pdfs/{{ page.entry.pdf }}" width="1000" height="1000" type='application/pdf'></object>
+  {% endif %}
+
+</body>
+</html>

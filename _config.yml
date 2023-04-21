@@ -40,6 +40,27 @@ author:
       url: "https://github.com/ameertg"
 
 
+scholar:
+  style: apa
+  locale: en
+
+  source: ./_bibliography/
+  bibliography: references.bib
+  bibliography_template: bib
+  # Note: if you have latex math in your bibtex, the latex filter
+  # preprocessing may conflict with MathJAX if the latter is enabled.
+  # See https://github.com/alshedivat/al-folio/issues/357.
+  bibtex_filters: [latex, smallcaps, superscript]
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: details.html
+  details_link: Details
+
+  query: "@*"
+
 
 
 # Exclude from processing.

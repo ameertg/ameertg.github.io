@@ -7,4 +7,6 @@ main:
   - title: Music
     url: /music.html
   - title: CV
-    url: /CV.pdf
+    url: /cv.html
+  - title: Publications
+    url: /publications.html
