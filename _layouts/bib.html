@@ -1,1 +1,14 @@
-{{reference}}
+---
+layout: post
+---
+{{ reference }}
+
+<a class="btn-sm btn-primary text-light" data-bs-toggle="collapse" href="#collapse-{{ entry.key }}" role="button" aria-expanded="false" aria-controls="collapse-{{ entry.key }}">
+    BibTeX</a>
+
+<div class="collapse" id="collapse-{{ entry.key }}">
+    <div class="card card-body">
+  
+{{ entry.bibtex }}
+</div>
+</div>

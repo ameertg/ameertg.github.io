@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 classes: wide
 title:  "above water"
 category: music

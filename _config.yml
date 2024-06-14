@@ -27,8 +27,7 @@ baseurl: "/"
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dirt"
+remote_theme: "jonaharagon/jekyll-bootstrap-theme"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
@@ -51,6 +50,8 @@ scholar:
   source: ./_bibliography/
   bibliography: references.bib
   bibliography_template: bib
+  sort_by: year,month
+  order: descending,descending
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
@@ -66,6 +67,19 @@ scholar:
   query: "@*"
 
 
+bootstrap:
+  header_pages:
+   - cv.html
+   - publications.html
+   - projects.html
+   - music.html
+   - thoughts.html
+   - about.md
+
+
+excerpts:
+  show: true
+  auto_truncate: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

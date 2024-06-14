@@ -1,0 +1,36 @@
+$btn-background: $primary;
+$btn-border: $secondary;
+$btn-color: $light;
+
+@mixin button-variant($background, $border, $color) {
+    background-color: $btn-background;
+    border: 2px solid $btn-border;
+    color: $dark;
+
+    &:hover {
+        border: 2px solid $btn-background;
+        color: $btn-color;
+    }
+}
+
+btn-primary {
+    &.basic {
+        @include button-variant($btn-background, $btn-border, $btn-color);
+    }
+}
+
+a {
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: none; // Remove underline on hover
+    }
+  
+    &:focus {
+      text-decoration: none; // Remove underline on focus
+    }
+  
+    &:active {
+      text-decoration: none; // Remove underline on active
+    }
+  }
