@@ -37,6 +37,7 @@ author:
   avatar   : "/assets/images/me.jpg"
   bio      : "PhD student at the University of Edinburgh, School of Informatics."
   location : "Edinburgh, UK"
+  email : "ameer.saadat@ed.ac.uk"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

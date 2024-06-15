@@ -2,3 +2,21 @@
 layout: post
 title: Thoughts
 ---
+{% assign thoughts = site.posts | where: 'category', "thoughts"%}
+
+{% if thoughts.size > 0 %}
+    <ul>
+      {% for thought in thoughts %}
+        <li>
+          <a href="{{ thought.url }}">{{ thought.title }}</a>
+          {{ thought.excerpt }}
+        </li>
+      {% endfor %}
+    </ul>
+
+{% else %}
+
+No thoughts, just vibes... 
+
+{% endif %}
+

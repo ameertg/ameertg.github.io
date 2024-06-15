@@ -1,20 +1,21 @@
-<footer class="footer mt-auto py-3 bg-dark text-light h-card">
+<footer class="footer mt-auto bg-dark text-light py-3 h-card text-align-end">
     <data class="u-url" href="{{ "/" | relative_url }}"></data>
-    <div class="container py-3">
+    <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col mt-auto mb-0">
           {%- if site.author %}
-          <ul class="contact-list list-unstyled">
-            {% if site.author.name -%}
-              <li class="p-name">{{ site.author.name | escape }}</li>
-            {% endif -%}
+          <ul class="contact-list list-unstyled ">
             {% if site.author.email -%}
-              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            <li><i class="fa-solid fa-envelope"></i> {{ site.author.email }}</a></li>
             {%- endif %}
+
+            {% if site.author.name -%}
+              <li class="p-name">© {{ site.author.name | escape }}, {{ "now" | date: "%Y" }}</li>
+            {% endif -%}
           </ul>
           {%- endif %}
         </div>
-        <div class="col">
+        <div class="col mt-auto mb-0">
           <p>{{ site.description | escape }}</p>
         </div>
       </div>
