@@ -6,14 +6,38 @@ author_profile: true
 ---
 <!DOCTYPE HTML>
 <html>
+
 <body>
   {% assign song_posts = site.posts | where: 'category', 'music' %}
+  <h2>Releases</h2>
+  {% for album in site.data.bandcamp %}
+  {% assign post = song_posts | where: 'title', album.title %}
+  {% if post %}
+    <a href="{{ post[0].url }}">{{ post[0].title }}</a>
+  {% endif %}
+  <div class="row">
+  <div class="col-6 embed-responsive">
+
+    <iframe class="embed-responsive-item" width="100%" height="200px" src="https://bandcamp.com/EmbeddedPlayer/album={{ album.id }}/size=medium/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="{{ album.url }}">all that broke from a single lamp by Dawam</a></iframe>  
+  </div>
+  <div class="col-6">
+    <p>{{ album.liner }}</p>
+</div>
+    {% endfor %}
+  
+
+  <h2>Unreleased Tracks</h2>
+
   {% for song in site.data.soundcloud %}
+
   {% assign post = song_posts | where: 'title', song.title %}
   {% if post %}
-    <a href="{{ post[0].url }}">{{ post[0].title }}</a><br>
+    <a href="{{ post[0].url }}"><h3>{{ post[0].title }}</h3></a>
   {% endif %}
-    <iframe width="100%" height="3%" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{song.track}}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/minor6" title="ameertg" target="_blank" style="color: #cccccc; text-decoration: none;">ameertg</a> · <a href="{{song.url}}" title="{{song.title}}" target="_blank" style="color: #cccccc; text-decoration: none;">{{song.title}}</a></div><br>
-  {% endfor %}
+  <div class="embed-responsive embed-responsive-21by9">
+    <iframe class="embed-responsive-item" width="100%" height="120px" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/{{ song.track }}&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/minor6" title="ameertg" target="_blank" style="color: #cccccc; text-decoration: none;">ameertg</a> · <a href="{{song.url}}" title="{{song.title}}" target="_blank" style="color: #cccccc; text-decoration: none;">{{song.title}}</a></div>
+</div>
+
+    {% endfor %}
 </html>
 </body>
