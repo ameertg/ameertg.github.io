@@ -3001,6 +3001,10 @@ textarea.form-control-lg { min-height: calc(1.5em + 1rem + 2px); }
   .d-print-flex { display: flex !important; }
   .d-print-inline-flex { display: inline-flex !important; }
   .d-print-none { display: none !important; } }
+iframe { border: none; margin: 0; padding: 0; display: block; /* Add this */ }
+
+flex-container { display: flex; flex-wrap: nowrap; }
+
 btn-primary.basic { background-color: #C76B3E; border: 2px solid #1D5E43; color: #3A4447; }
 btn-primary.basic:hover { border: 2px solid #C76B3E; color: #FFFFFF; }
 
