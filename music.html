@@ -15,13 +15,15 @@ author_profile: true
   {% if post %}
     <a href="{{ post[0].url }}">{{ post[0].title }}</a>
   {% endif %}
-  <div class="container bg-secondary">
+  <div class="container bg-primary" >
 
   <div class="row  nopadding">
-  <div class="col-md-5 g-0 col-s-12 ms-0 ">
-    <iframe style="width: 350px; height: 560px;" src="https://bandcamp.com/EmbeddedPlayer/album={{ album.id }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/transparent=true/" seamless><a href="{{ album.url }}">{{ album.title }}</a></iframe>
+  <div class="col-md-5 g-0 col-xs-12 ms-0 mx-auto">
+    <div class="ratio ratio-1x1">
+    <iframe class="embed-responsive-item" width="100%" height="100%" src="https://bandcamp.com/EmbeddedPlayer/album={{ album.id }}/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=true/transparent=true/" seamless><a href="{{ album.url }}">{{ album.title }}</a></iframe>
   </div>
-  <div class="col-md-7 g-0 col-s-12 align-self-center text-light ps-0 pe-4 ">
+  </div>
+  <div class="col-md-7 g-0 col-xs-12 align-self-center text-center text-light ps-0 pe-4 ">
     <p>{{ album.liner }}</p>
 </div>
 </div>
