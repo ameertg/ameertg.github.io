@@ -1,8 +1,14 @@
 ---
 layout: page
-classes: wide
 title: Publications
-author_profile: true
+lede: Updated automatically from <a href="https://openalex.org/A5033851139">OpenAlex</a>. See also <a href="https://scholar.google.com/citations?user=v6iAy08AAAAJ&hl=en">Google Scholar</a>.
 ---
-
-{% bibliography %}
+{%- assign years = site.data.publications | group_by: "year" -%}
+{%- for year in years -%}
+<section class="pub-year">
+  <h2>{{ year.name }}</h2>
+  {%- for pub in year.items -%}
+  {%- include publication.html pub=pub hide_year=true -%}
+  {%- endfor -%}
+</section>
+{%- endfor -%}

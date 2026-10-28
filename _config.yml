@@ -1,95 +1,44 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Site settings. Restart `bundle exec jekyll serve` after editing this file.
 title: Ameer Saadat-Yazdi
+description: >-
+  Research on computational argumentation, plus thoughts, music and projects.
+url: "https://ameertg.github.io"
+baseurl: ""
 repository: ameertg/ameertg.github.io
-
-email: ameer.saadat99@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  A blog to share thoughts, music and projects that I'm working on.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ameertg.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  ameertg
-baseurl: "/"
-
-
-# Build settings
-markdown: kramdown
-remote_theme: "jonaharagon/jekyll-bootstrap-theme"
-plugins:
-  - jekyll-feed
-  - jekyll-include-cache
+lang: en
 
 author:
-  name     : "Ameer Saadat-Yazdi"
-  avatar   : "/assets/images/me.jpg"
-  bio      : "PhD student at the University of Edinburgh, School of Informatics."
-  location : "Edinburgh, UK"
-  email : "ameer.saadat@ed.ac.uk"
+  name: Ameer Saadat-Yazdi
+  avatar: /assets/images/me.png
+  tagline: Argumentation theory & computational linguistics · Inria, Université Côte d'Azur
+  location: Sophia Antipolis, France
+  email: ameer.saadat-yazdi@inria.fr
+  # Shown on the home page and in the footer, in this order
+  # (`home: false` keeps a link out of the home page).
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/ameertg"
+    - label: Google Scholar
+      icon: fa-brands fa-google-scholar
+      url: https://scholar.google.com/citations?user=v6iAy08AAAAJ&hl=en
+    - label: ORCID
+      icon: fa-brands fa-orcid
+      url: https://orcid.org/0009-0000-0247-7222
+    - label: GitHub
+      icon: fa-brands fa-github
+      url: https://github.com/ameertg
+    - label: Bandcamp
+      icon: fa-brands fa-bandcamp
+      url: https://languageinstinct.bandcamp.com
+      home: false
 
+markdown: kramdown
+plugins:
+  - jekyll-feed
 
-scholar:
-  style: apa
-  locale: en
-
-  source: ./_bibliography/
-  bibliography: references.bib
-  bibliography_template: bib
-  sort_by: year,month
-  order: descending,descending
-  # Note: if you have latex math in your bibtex, the latex filter
-  # preprocessing may conflict with MathJAX if the latter is enabled.
-  # See https://github.com/alshedivat/al-folio/issues/357.
-  bibtex_filters: [latex, smallcaps, superscript]
-
-  replace_strings: true
-  join_strings: true
-
-  details_dir: bibliography
-  details_layout: details.html
-  details_link: Details
-
-  query: "@*"
-
-
-bootstrap:
-  header_pages:
-   - cv.html
-   - publications.html
-   - projects.html
-   - music.html
-   - thoughts.html
-   - about.md
-
-
-excerpts:
-  show: true
-  auto_truncate: true
-
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - scripts
+  - vendor
+  - .bundle
+  - .github

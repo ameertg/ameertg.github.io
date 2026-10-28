@@ -1,22 +1,6 @@
 ---
-layout: post
+layout: page
 title: Projects
-author_profile: true
 ---
-
-<!DOCTYPE HTML>
-<html>
-  <body>
-
-    <ul>
-      {% assign projects = site.posts | where: 'category', "project"%}
-      {% for project in projects %}
-        <li>
-          <a href="{{ project.url }}">{{ project.title }}</a>
-          {{ project.excerpt }}
-        </li>
-      {% endfor %}
-    </ul>
-
-  </body>
-</html>
+{%- assign projects = site.posts | where: "category", "project" -%}
+{%- include post-list.html posts=projects empty="Nothing here yet." -%}

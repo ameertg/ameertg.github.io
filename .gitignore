@@ -2,4 +2,7 @@
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
-Gemfile.lock
+_site/
+.jekyll-cache/
+.bundle/
+vendor/

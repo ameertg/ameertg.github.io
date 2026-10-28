@@ -1,0 +1,20 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- assign page_title = page.title | default: site.title -%}
+  <title>{% if page.title and page.url != "/" %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:title" content="{{ page_title | escape }}">
+  <meta property="og:image" content="{{ site.author.avatar | absolute_url }}">
+  <script>
+    try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch (e) {}
+  </script>
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <link rel="icon" href="{{ site.author.avatar | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <script src="https://kit.fontawesome.com/3acbdb6e85.js" crossorigin="anonymous" defer></script>
+  {%- feed_meta -%}
+</head>

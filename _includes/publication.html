@@ -1,0 +1,34 @@
+{%- comment -%} Renders one entry from _data/publications.yml, passed as include.pub. {%- endcomment -%}
+{%- assign pub = include.pub -%}
+{%- assign slug = pub.id | default: pub.title | slugify -%}
+<article class="pub">
+  <h3 class="pub-title">
+    {%- if pub.url -%}<a href="{{ pub.url }}">{{ pub.title }}</a>{%- else -%}{{ pub.title }}{%- endif -%}
+  </h3>
+  <p class="pub-authors">
+    {%- for author in pub.authors -%}
+    {%- if author.me -%}<strong>{{ author.name }}</strong>{%- else -%}{{ author.name }}{%- endif -%}
+    {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+  </p>
+  <p class="pub-venue">
+    <span class="pub-type">{{ pub.type_label }}</span>
+    {%- if pub.venue %} <em>{{ pub.venue }}</em>{% endif %}
+    {%- unless include.hide_year %} · {{ pub.year }}{% endunless -%}
+  </p>
+  {%- unless include.compact %}
+  <div class="pub-actions">
+    {%- if pub.pdf %}<a class="chip" href="{{ pub.pdf | relative_url }}">PDF</a>{% endif -%}
+    {%- if pub.doi %}<a class="chip" href="https://doi.org/{{ pub.doi }}">DOI</a>{% endif -%}
+    {%- if pub.abstract %}<button class="chip" type="button" aria-expanded="false" aria-controls="abs-{{ slug }}">Abstract</button>{% endif -%}
+    <button class="chip" type="button" aria-expanded="false" aria-controls="bib-{{ slug }}">BibTeX</button>
+  </div>
+  {%- if pub.abstract %}
+  <div class="pub-panel" id="abs-{{ slug }}" hidden><p>{{ pub.abstract }}</p></div>
+  {%- endif %}
+  <div class="pub-panel" id="bib-{{ slug }}" hidden>
+    <pre class="bibtex"><code>{{ pub.bibtex | escape }}</code></pre>
+    <button class="chip copy" type="button" data-copy="bib-{{ slug }}">Copy</button>
+  </div>
+  {%- endunless %}
+</article>

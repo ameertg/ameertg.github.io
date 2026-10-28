@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{%- assign section = site.data.navigation.main | where: "url", "/projects.html" | first -%}
+{%- if page.category == "thoughts" -%}{%- assign section = site.data.navigation.main | where: "url", "/thoughts.html" | first -%}{%- endif -%}
+{%- if page.category == "music" -%}{%- assign section = site.data.navigation.main | where: "url", "/music.html" | first -%}{%- endif -%}
+<article class="page post">
+  <header class="page-header">
+    <p class="eyebrow"><a href="{{ section.url | relative_url }}">{{ section.title }}</a> · <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time></p>
+    <h1>{{ page.title | escape }}</h1>
+  </header>
+  <div class="prose">
+    {{ content }}
+  </div>
+</article>

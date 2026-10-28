@@ -1,23 +1,11 @@
-<footer class="footer mt-auto bg-dark text-light py-3 h-card text-align-end">
-    <data class="u-url" href="{{ "/" | relative_url }}"></data>
-    <div class="container">
-      <div class="row">
-        <div class="col mt-auto mb-0">
-          {%- if site.author %}
-          <ul class="contact-list list-unstyled ">
-            {% if site.author.email -%}
-            <li><i class="fa-solid fa-envelope"></i> {{ site.author.email }}</a></li>
-            {%- endif %}
-
-            {% if site.author.name -%}
-              <li class="p-name">© {{ site.author.name | escape }}, {{ "now" | date: "%Y" }}</li>
-            {% endif -%}
-          </ul>
-          {%- endif %}
-        </div>
-        <div class="col mt-auto mb-0">
-          <p>{{ site.description | escape }}</p>
-        </div>
-      </div>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© {{ "now" | date: "%Y" }} {{ site.author.name | escape }} · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
+    <ul class="footer-links">
+      {%- for link in site.author.links -%}
+      <li><a href="{{ link.url }}" aria-label="{{ link.label }}" title="{{ link.label }}"><i class="{{ link.icon }}" aria-hidden="true"></i></a></li>
+      {%- endfor -%}
+      <li><a href="{{ '/feed.xml' | relative_url }}" aria-label="RSS feed" title="RSS feed"><i class="fa-solid fa-rss" aria-hidden="true"></i></a></li>
+    </ul>
+  </div>
+</footer>

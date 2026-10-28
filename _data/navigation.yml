@@ -1,12 +1,11 @@
 main:
-
-  # - title: Thoughts
-  #   url: /thoughts/
-  - title: Projects
-    url: /projects.html
-  - title: Music
-    url: /music.html
-  - title: CV
-    url: /cv.html
   - title: Publications
     url: /publications.html
+  - title: Projects
+    url: /projects.html
+  - title: Thoughts
+    url: /thoughts.html
+  - title: Music
+    url: /music.html
+  - title: About
+    url: /about/

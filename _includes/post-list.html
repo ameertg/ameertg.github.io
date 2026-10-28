@@ -1,0 +1,16 @@
+{%- comment -%} Lists include.posts; set include.empty for the fallback text. {%- endcomment -%}
+{%- if include.posts.size > 0 -%}
+<ul class="post-list">
+  {%- for post in include.posts -%}
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+    <div>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>
+{%- else -%}
+<p class="muted">{{ include.empty }}</p>
+{%- endif -%}

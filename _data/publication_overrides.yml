@@ -1,0 +1,73 @@
+# Hand-edited corrections for the publications list.
+#
+# _data/publications.yml is regenerated weekly from OpenAlex by
+# scripts/fetch_publications.rb; anything here is merged on top of it.
+
+# https://openalex.org/A5033851139
+openalex_author: A5033851139
+
+# Keyed by DOI (or OpenAlex work ID, e.g. W4386566724). Any field can be
+# replaced: title, venue, pdf, abstract, url, type_label...
+# `pdf` can be a filename in assets/pdfs/ or a full URL. `hide: true` removes
+# an entry from the site.
+overrides:
+  10.3233/faia260823:
+    venue: Computational Models of Argument (COMMA 2026)
+  10.7488/era/7016:
+    venue: University of Edinburgh
+  10.1007/s10503-025-09682-z:
+    venue: Argumentation (journal)
+  10.18653/v1/2025.argmining-1.11:
+    venue: 12th Workshop on Argument Mining (ArgMining 2025)
+  10.18653/v1/2025.argmining-1.27:
+    venue: 12th Workshop on Argument Mining (ArgMining 2025)
+  10.18653/v1/2024.acl-long.520:
+    venue: 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024)
+    pdf: ACL2024-Camera-Ready.pdf
+  10.65109/rags2524:
+    venue: 22nd International Conference on Autonomous Agents and Multiagent Systems (AAMAS 2023), Demo Track
+    pdf: AAMAS23-Camera-Ready.pdf
+  10.18653/v1/2023.eacl-main.182:
+    venue: 17th Conference of the European Chapter of the Association for Computational Linguistics (EACL 2023)
+    pdf: EACL2023-Camera-Ready.pdf
+  10.1007/978-3-030-87444-5_12:
+    venue: TDA4MedicalData Workshop @ MICCAI 2021
+    pdf: TDA21-Camera-Ready.pdf
+    abstract: >-
+      Alzheimer's disease is a debilitating disease in the elderly, and is an
+      increasing burden to the society due to an aging population. In this
+      paper, we apply topological data analysis to structural MRI scans of the
+      brain, and show that topological invariants make accurate predictors for
+      Alzheimer's. Using the construct of Betti Curves, we first show that
+      topology is a good predictor of Age. Then we develop an approach to
+      factor out the topological signature of age from Betti curves, and thus
+      obtain accurate detection of Alzheimer's disease. Experimental results
+      show that topological features used with standard classifiers perform
+      comparably to recently developed convolutional neural networks. These
+      results imply that topology is a major aspect of structural changes due
+      to aging and Alzheimer's. We expect this relation will generate further
+      insights for both early detection and better understanding of the
+      disease.
+
+# Papers OpenAlex doesn't have. Mark your own name with a leading *.
+extra:
+  - title: "KEViN: A Knowledge Enhanced Validity and Novelty Classifier for Arguments"
+    authors: ["*Ameer Saadat-Yazdi", "Xue Li", "Sandrine Chausson", "Vaishak Belle", "Björn Ross", "Jeff Z. Pan", "Nadin Kökciyan"]
+    year: 2022
+    date: "2022-10-01"
+    type: conference-paper
+    venue: 9th Workshop on Argument Mining (ArgMining 2022)
+    pages: 104–110
+    url: https://aclanthology.org/2022.argmining-1.9
+    pdf: ArgMining22-Camera-Ready.pdf
+    abstract: >-
+      The ArgMining 2022 Shared Task is concerned with predicting the validity
+      and novelty of an inference for a given premise and conclusion pair. We
+      propose two feed-forward network based models (KEViN1 and KEViN2), which
+      combine features generated from several pretrained transformers and the
+      WikiData knowledge graph. The transformers are used to predict
+      entailment and semantic similarity, while WikiData is used to provide a
+      semantic measure between concepts in the premise-conclusion pair. Our
+      proposed models show significant improvement over RoBERTa, with KEViN1
+      outperforming KEViN2 and obtaining second rank on both subtasks (A and
+      B) of the ArgMining 2022 Shared Task.
